@@ -72,10 +72,10 @@ ody {
 
 /* Sidebars */
 .sidebar {
-  width: 240px;
+  width: 100%;
   background-color: #2c3e50;
   color: #fff;
-  padding: 24px 16px;
+  /* padding: 24px 16px; */
   position: fixed;
   top: 20px;
   bottom: 0;
@@ -306,14 +306,19 @@ ody {
 
 @media only screen and (max-width:479px) {
 
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
   body {
   font-family: 'Inter', sans-serif;
   background-color: #f0f4f8;
   color: #333;
   margin: 0;
   padding: 0;
-  /* height: 100vh; */
-  overflow: hidden;
+  /* overflow: hidden; */
   box-sizing: border-box;
 }
 
@@ -351,7 +356,7 @@ ody {
   .sidebar {
     /* top: 5px; */
     width: 100vw;
-    height: 25vh;
+    height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
