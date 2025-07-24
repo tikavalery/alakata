@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,58 +6,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vocabulary</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
- <link rel="stylesheet" type="text/css" href="./vocabulary.css">
+  <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./vocabulary.css">
+<style>
+ 
+
+</style>
+
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Word List</h2>
-    <ul id="wordList"></ul>
+  <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                          <div class="container-fluid">
+                            <a class="navbar-brand" href="#">ALAKATA</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                              <ul class="navbar-nav ms-auto">
+                                <li class="nav-item">
+                                  <a class="nav-link" href="../home.html">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown">
+                                    Courses
+                                  </a>
+                                  <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="../home.html">Conjugation</a></li>
+                                    <li><a class="dropdown-item" href="../home.html">Adjectives</a></li>
+                                    <li><a class="dropdown-item" href="../home.html">Adverbs</a></li>
+                                    <li><a class="dropdown-item" href="../home.html">Grammar</a></li>
+                                    <li><a class="dropdown-item" href="../home.html">Articles</a></li>
+                                    <li><a class="dropdown-item" href="../home.html">Verbs</a></li>
+                                    <li><a class="dropdown-item" href="../home.html">Questions</a></li>
+                                    <li><a class="dropdown-item" href="../home.html">Negation</a></li>
+                                  </ul>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link" href="./vocabularycart/vocabularyCartA.html">Downloads</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                </nav>
+    <!-- Sidebar Left -->
+                <aside class="sidebar">
+                  <!-- <h2>Word List</h2> -->
+                  <ul id="wordList" class="list-group sidebar"></ul>
+                </aside>
+                
+    <!-- Main Content -->
+                <main class="main">
+                                             <div id="controls" style="display:none;" class="controls">
+                            <button id="prevBtn">Previous</button>
+                            <button id="pauseResumeBtn">Pause</button>
+                            <button id="stopBtn">Stop</button>
+                            <button id="nextBtn">Next</button>
+                          </div> 
+                          <div id="wordDisplay">▶ Play </div>
+
+                           <div class="pagination">
+                            <a class="letter active" href="./vocabulary.html">A</a>
+                            <a class="letter" href="./vocabularyB.html">B</a>
+                            <a class="letter" href="./vocabularyC.html">C</a>
+                            <a class="letter" href="./vocabularyD.html">D</a>
+                            <a class="letter" href="./vocabularyE.html">E</a>
+                            <a class="letter" href="./vocabularyF.html">F</a>
+                            <a class="letter" href="./vocabularyG.html">G</a>
+                            <a class="letter" href="./vocabularyH.html">H</a>
+                            <a class="letter" href="./vocabularyI.html">I</a>
+                            <a class="letter" href="./vocabularyJ.html">J</a>
+                            <a class="letter" href="./vocabularyK.html">K</a>
+                            <a class="letter" href="./vocabularyK.html">L</a>
+                            <a class="letter" href="./vocabularyM.html">M</a>
+                            <a class="letter" href="./vocabularyN.html">N</a>
+                            <a class="letter" href="./vocabularyO.html">O</a>
+                            <a class="letter" href="./vocabularyP.html">P</a>
+                            <a class="letter" href="./vocabularyQ.html">Q</a>
+                            <a class="letter" href="./vocabularyR.html">R</a>
+                            <a class="letter" href="./vocabularyS.html">S</a>
+                            <a class="letter" href="./vocabularyT.html">T</a>
+                            <a class="letter" href="./vocabularyV.html">U</a>
+                            <a class="letter" href="./vocabularyV.html">V</a>
+                            <a class="letter" href="./vocabularyW.html">W</a>
+                            <a class="letter" href="./vocabularyX.html">X</a>
+                            <a class="letter" href="./vocabularyY.html">Y</a>
+                            <a class="letter" href="./vocabularyZ.html">Z</a>
+                          </div> 
+                        </main>
+
+    <!-- Sidebar Right -->
+    <aside class="sidebar">
+      <h2> Downloads </h2>
+         <p>
+        Download PDF of A Vocabulary
+        <span><a href="./vocabularycart/vocabularyCartA.html">here</a></span>
+      </p>
+      <p>
+        Download Fill in the blank exercises
+        <span><a href="./vocabularycart/vocabularyCartA.html">here</a></span>
+      </p> 
+    </aside>
   </div>
 
-  <div class="main">
-    <h1>Vocabulary</h1>
-    <div class="pagination">
-      <!-- A-Z Pagination -->
-      <a class="letter" href="./vocabulary.html">A</a>
-      <a class="letter" href="./vocabularyB.html">B</a>
-      <a class="letter" href="./vocabularyC.html">C</a>
-      <a class="letter" href="./vocabularyD.html">D</a>
-      <a class="letter" href="./vocabularyE.html">E</a>
-      <a class="letter" href="./vocabularyF.html">F</a>
-      <a class="letter" href="./vocabularyG.html">G</a>
-      <a class="letter" href="./vocabularyH.html">H</a>
-      <a class="letter" href="./vocabularyI.html">I</a>
-      <a class="letter" href="./vocabularyJ.html">J</a>
-      <a class="letter" href="./vocabularyK.html">K</a>
-      <a class="letter" href="./vocabularyK.html">L</a>
-      <a class="letter" href="./vocabularyM.html">M</a>
-      <a class="letter" href="./vocabularyN.html">N</a>
-      <a class="letter" href="./vocabularyO.html">O</a>
-      <a class="letter" href="./vocabularyP.html">P</a>
-      <a class="letter" href="./vocabularyQ.html">Q</a>
-      <a class="letter" href="./vocabularyR.html">R</a>
-      <a class="letter" href="./vocabularyS.html">S</a>
-      <a class="letter" href="./vocabularyT.html">T</a>
-      <a class="letter  active" href="./vocabularyV.html">U</a>
-      <a class="letter" href="./vocabularyV.html">V</a>
-      <a class="letter" href="./vocabularyW.html">W</a>
-      <a class="letter" href="./vocabularyX.html">X</a>
-      <a class="letter" href="./vocabularyY.html">Y</a>
-      <a class="letter" href="./vocabularyZ.html">Z</a>
-    </div>
 
-    <div id="wordDisplay">▶ Click to Start</div>
-    <div class="instruction">Click the box to begin audio playback</div>
-    <div id="controls" style="display:none;">
-      <button id="prevBtn">Previous</button>
-      <button id="pauseResumeBtn">Pause</button>
-      <button id="stopBtn">Stop</button>
-      <button id="nextBtn">Next</button>
-    </div>
-  </div>
+ 
+
+
 
   <script>
-
 //  word script Here  
 const words = [
   ["ugly", "feo"],
@@ -102,6 +162,7 @@ const words = [
     // Populate sidebar list
     words.forEach(([en, es], i) => {
       const li = document.createElement('li');
+          li.classList.add('list-group-item');
       li.textContent = `${en} - ${es}`;
       li.dataset.idx = i;
       li.addEventListener('click', () => {
@@ -160,6 +221,8 @@ const words = [
           await new Promise(r => setTimeout(r, 200));
           continue;
         }
+
+        
 
         updateDisplayAndHighlight();
         const [english, spanish] = words[index];
@@ -253,5 +316,9 @@ const words = [
       }
     });
   </script>
+  <!-- Bootstrap 5 JS + Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
+
