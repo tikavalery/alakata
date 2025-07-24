@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vocabulary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="./vocabulary.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Word List</h2>
+    <ul id="wordList"></ul>
+  </div>
+
+  <div class="main">
+    <h1>Vocabulary</h1>
+    <div class="pagination">
+      <!-- A-Z Pagination -->
+      <a class="letter" href="./vocabulary.html">A</a>
+      <a class="letter" href="./vocabularyB.html">B</a>
+      <a class="letter" href="./vocabularyC.html">C</a>
+      <a class="letter" href="./vocabularyD.html">D</a>
+      <a class="letter" href="./vocabularyE.html">E</a>
+      <a class="letter" href="./vocabularyF.html">F</a>
+      <a class="letter" href="./vocabularyG.html">G</a>
+      <a class="letter" href="./vocabularyH.html">H</a>
+      <a class="letter" href="./vocabularyI.html">I</a>
+      <a class="letter" href="./vocabularyJ.html">J</a>
+      <a class="letter" href="./vocabularyK.html">K</a>
+      <a class="letter" href="./vocabularyK.html">L</a>
+      <a class="letter" href="./vocabularyM.html">M</a>
+      <a class="letter" href="./vocabularyN.html">N</a>
+      <a class="letter" href="./vocabularyO.html">O</a>
+      <a class="letter" href="./vocabularyP.html">P</a>
+      <a class="letter" href="./vocabularyQ.html">Q</a>
+      <a class="letter" href="./vocabularyR.html">R</a>
+      <a class="letter  active" href="./vocabularyS.html">S</a>
+      <a class="letter" href="./vocabularyT.html">T</a>
+      <a class="letter" href="./vocabularyV.html">U</a>
+      <a class="letter" href="./vocabularyV.html">V</a>
+      <a class="letter" href="./vocabularyW.html">W</a>
+      <a class="letter" href="./vocabularyX.html">X</a>
+      <a class="letter" href="./vocabularyY.html">Y</a>
+      <a class="letter" href="./vocabularyZ.html">Z</a>
+    </div>
+
+    <div id="wordDisplay">▶ Click to Start</div>
+    <div class="instruction">Click the box to begin audio playback</div>
+    <div id="controls" style="display:none;">
+      <button id="prevBtn">Previous</button>
+      <button id="pauseResumeBtn">Pause</button>
+      <button id="stopBtn">Stop</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <script>
+
+//  word script Here  
+
+const words = [
+  ["sacrifice", "sacrificio"],
+  ["sad", "triste"],
+  ["saddle", "silla de montar"],
+  ["safe", "seguro"],
+  ["safety", "seguridad"],
+  ["sake", "motivo"],
+  ["same", "mismo"],
+  ["sand", "arena"],
+  ["satisfaction", "satisfacción"],
+  ["Saturday", "sábado"],
+  ["scarcely", "escasamente"],
+  ["scene", "escena"],
+  ["scent", "aroma"],
+  ["school", "escuela"],
+  ["science", "ciencia"],
+  ["screen", "pantalla"],
+  ["sea", "mar"],
+  ["season", "estación"],
+  ["seat", "asiento"],
+  ["seated", "sentado"],
+  ["second", "segundo"],
+  ["secret", "secreto"],
+  ["section", "sección"],
+  ["security", "seguridad"],
+  ["sensation", "sensación"],
+  ["sense", "sentido"],
+  ["sentence", "oración"],
+  ["series", "serie"],
+  ["serious", "serio"],
+  ["seriously", "seriamente"],
+  ["servant", "sirviente"],
+  ["service", "servicio"],
+  ["seven", "siete"],
+  ["several", "varios"],
+  ["sex", "sexo"],
+  ["shade", "sombra"],
+  ["shadow", "sombra"],
+  ["shame", "vergüenza"],
+  ["shape", "forma"],
+  ["sharp", "afilado"],
+  ["sharply", "agudamente"],
+  ["she", "ella"],
+  ["sheet", "hoja"],
+  ["shell", "concha"],
+  ["shelter", "refugio"],
+  ["ship", "barco"],
+  ["shirt", "camisa"],
+  ["shit", "caca"],
+  ["shock", "choque"],
+  ["shoe", "zapato"],
+  ["shop", "tienda"],
+  ["shore", "costa"],
+  ["short", "corto"],
+  ["shot", "disparo"],
+  ["should", "debería"],
+  ["shoulder", "hombro"],
+  ["shower", "ducha"],
+  ["sick", "enfermo"],
+  ["side", "lado"],
+  ["sight", "vista"],
+  ["sign", "signo"],
+  ["signal", "señal"],
+  ["silence", "silencio"],
+  ["silent", "silencioso"],
+  ["silently", "silenciosamente"],
+  ["silk", "seda"],
+  ["silly", "tonto"],
+  ["silver", "plata"],
+  ["simple", "simple"],
+  ["simply", "simplemente"],
+  ["sin", "pecado"],
+  ["since", "desde"],
+  ["single", "soltero"],
+  ["sir", "señor"],
+  ["sister", "hermana"],
+  ["situation", "situación"],
+  ["six", "seis"],
+  ["size", "tamaño"],
+  ["skill", "habilidad"],
+  ["skin", "piel"],
+  ["skirt", "falda"],
+  ["sky", "cielo"],
+  ["slave", "esclavo"],
+  ["sleeve", "manga"],
+  ["slight", "ligero"],
+  ["slightly", "ligeramente"],
+  ["slope", "pendiente"],
+  ["slow", "lento"],
+  ["slowly", "lentamente"],
+  ["small", "pequeño"],
+  ["smart", "inteligente"],
+  ["smoke", "humo"],
+  ["smooth", "suave"],
+  ["snow", "nieve"],
+  ["so", "así"],
+  ["society", "sociedad"],
+  ["sofa", "sofá"],
+  ["soft", "blando"],
+  ["softly", "suavemente"],
+  ["soldier", "soldado"],
+  ["solid", "sólido"],
+  ["some", "algunos"],
+  ["somebody", "alguien"],
+  ["somehow", "de alguna manera"],
+  ["someone", "alguien"],
+  ["something", "algo"],
+  ["sometimes", "a veces"],
+  ["somewhat", "algo"],
+  ["somewhere", "en alguna parte"],
+  ["son", "hijo"],
+  ["song", "canción"],
+  ["soon", "pronto"],
+  ["sorrow", "tristeza"],
+  ["sorry", "lo siento"],
+  ["sort", "tipo"],
+  ["soul", "alma"],
+  ["sound", "sonido"],
+  ["source", "fuente"],
+  ["south", "sur"],
+  ["space", "espacio"],
+  ["Spanish", "español"],
+  ["special", "especial"],
+  ["speech", "discurso"],
+  ["speed", "velocidad"],
+  ["spell", "deletrear"],
+  ["spirit", "espíritu"],
+  ["spite", "rencor"],
+  ["spot", "mancha"],
+  ["spring", "primavera"],
+  ["square", "cuadrado"],
+  ["staff", "personal"],
+  ["stage", "escenario"],
+  ["stair", "escalera"],
+  ["standard", "estándar"],
+  ["star", "estrella"],
+  ["state", "estado"],
+  ["statement", "declaración"],
+  ["station", "estación"],
+  ["steady", "constante"],
+  ["steel", "acero"],
+  ["step", "paso"],
+  ["still", "todavía"],
+  ["stock", "inventario"],
+  ["stomach", "estómago"],
+  ["stone", "piedra"],
+  ["store", "tienda"],
+  ["storm", "tormenta"],
+  ["story", "historia"],
+  ["straight", "recto"],
+  ["strange", "extraño"],
+  ["stranger", "extraño"],
+  ["stream", "arroyo"],
+  ["street", "calle"],
+  ["strength", "fuerza"],
+  ["string", "cuerda"],
+  ["stroke", "golpe"],
+  ["strong", "fuerte"],
+  ["structure", "estructura"],
+  ["student", "estudiante"],
+  ["stuff", "cosas"],
+  ["stupid", "estúpido"],
+  ["style", "estilo"],
+  ["subject", "sujeto"],
+  ["success", "éxito"],
+  ["successful", "exitoso"],
+  ["such", "tal"],
+  ["sudden", "repentino"],
+  ["suddenly", "de repente"],
+  ["suggestion", "sugerencia"],
+  ["suit", "traje"],
+  ["sum", "suma"],
+  ["summer", "verano"],
+  ["sun", "sol"],
+  ["Sunday", "domingo"],
+  ["supper", "cena"],
+  ["supply", "suministro"],
+  ["sure", "seguro"],
+  ["surely", "seguramente"],
+  ["surface", "superficie"],
+  ["suspicion", "sospecha"],
+  ["sweat", "sudor"],
+  ["sweet", "dulce"],
+  ["sword", "espada"],
+  ["sympathy", "simpatía"],
+  ["system", "sistema"],
+  ["to sail", "navegar"],
+  ["to satisfy", "satisfacer"],
+  ["to save", "salvar"],
+  ["to say", "decir"],
+  ["to scare", "asustar"],
+  ["to scratch", "rasguñar"],
+  ["to scream", "gritar"],
+  ["to search", "buscar"],
+  ["to secure", "asegurar"],
+  ["to see", "ver"],
+  ["to seek", "buscar"],
+  ["to seem", "parecer"],
+  ["to seize", "apoderarse"],
+  ["to sell", "vender"],
+  ["to send", "enviar"],
+  ["to separate", "separar"],
+  ["to serve", "servir"],
+  ["to set", "establecer"],
+  ["to settle", "asentarse"],
+  ["to shake", "sacudir"],
+  ["to shall", "deber"],
+  ["to share", "compartir"],
+  ["to shed", "derramar"],
+  ["to shift", "cambiar"],
+  ["to shine", "brillar"],
+  ["to shiver", "temblar"],
+  ["to shoot", "disparar"],
+  ["to shout", "gritar"],
+  ["to shove", "empujar"],
+  ["to show", "mostrar"],
+  ["to shrug", "encoger los hombros"],
+  ["to shudder", "estremecerse"],
+  ["to shut", "cerrar"],
+  ["to sigh", "suspirar"],
+  ["to sing", "cantar"],
+  ["to sink", "hundir"],
+  ["to sip", "sorber"],
+  ["to sit", "sentarse"],
+  ["to slam", "cerrar de golpe"],
+  ["to slap", "abofetear"],
+  ["to sleep", "dormir"],
+  ["to slide", "deslizar"],
+  ["to slip", "resbalar"],
+  ["to smell", "oler"],
+  ["to smile", "sonreír"],
+  ["to snap", "chasquear"],
+  ["to sob", "sollozar"],
+  ["to spare", "ahorrar"],
+  ["to speak", "hablar"],
+  ["to spend", "gastar"],
+  ["to spin", "girar"],
+  ["to spread", "esparcir"],
+  ["to squeeze", "apretar"],
+  ["to stand", "estar de pie"],
+  ["to stare", "mirar fijamente"],
+  ["to start", "empezar"],
+  ["to startle", "asustar"],
+  ["to stay", "quedarse"],
+  ["to steal", "robar"],
+  ["to stick", "pegar"],
+  ["to stir", "revolver"],
+  ["to stop", "detener"],
+  ["to strain", "esforzar"],
+  ["to stretch", "estirar"],
+  ["to stride", "zancada"],
+  ["to strike", "golpear"],
+  ["to strip", "desnudarse"],
+  ["to struggle", "luchar"],
+  ["to study", "estudiar"],
+  ["to stumble", "tropezar"],
+  ["to succeed", "tener éxito"],
+  ["to suck", "chupar"],
+  ["to suffer", "sufrir"],
+  ["to suggest", "sugerir"],
+  ["to support", "apoyar"],
+  ["to suppose", "suponer"],
+  ["to surprise", "sorprender"],
+  ["to surround", "rodear"],
+  ["to survive", "sobrevivir"],
+  ["to suspect", "sospechar"],
+  ["to swallow", "tragar"],
+  ["to swear", "jurar"],
+  ["to sweep", "barrer"],
+  ["to swell", "hinchar"],
+  ["to swim", "nadar"],
+  ["to swing", "balancear"],
+  ["to switch", "cambiar"]
+];
+
+/////////////////
+    const display = document.getElementById('wordDisplay');
+    const controls = document.getElementById('controls');
+    const prevBtn = document.getElementById('prevBtn');
+    const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const wordList = document.getElementById('wordList');
+
+    let index = 0;
+    let started = false;
+    let stopRequested = false;
+    let skipRequested = false;
+    let pauseRequested = false;
+    let jumpToIndex = false;
+
+    // Populate sidebar list
+    words.forEach(([en, es], i) => {
+      const li = document.createElement('li');
+      li.textContent = `${en} - ${es}`;
+      li.dataset.idx = i;
+      li.addEventListener('click', () => {
+        index = i;
+        if (started) {
+          jumpToIndex = true;
+          speechSynthesis.cancel();
+        } else {
+          updateDisplayAndHighlight();
+        }
+      });
+      wordList.appendChild(li);
+    });
+
+    function updateDisplayAndHighlight() {
+      const [en, es] = words[index];
+      display.textContent = `${en} - ${es}`;
+
+      Array.from(wordList.children).forEach(li => li.classList.remove('active'));
+      const activeLi = wordList.querySelector(`li[data-idx="${index}"]`);
+      if (activeLi) {
+        activeLi.classList.add('active');
+        activeLi.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function speakWord(text, lang) {
+      return new Promise(resolve => {
+        if (stopRequested || skipRequested || jumpToIndex) {
+          resolve();
+          return;
+        }
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        utterance.onend = () => resolve();
+        utterance.onerror = () => resolve();
+        speechSynthesis.speak(utterance);
+      });
+    }
+
+    async function waitWithPause(ms) {
+      const interval = 100;
+      let waited = 0;
+      while (waited < ms) {
+        if (stopRequested || skipRequested || jumpToIndex) break;
+        if (!pauseRequested) {
+          waited += interval;
+        }
+        await new Promise(r => setTimeout(r, interval));
+      }
+    }
+
+    async function playLoop() {
+      while (!stopRequested) {
+        if (pauseRequested) {
+          await new Promise(r => setTimeout(r, 200));
+          continue;
+        }
+
+        updateDisplayAndHighlight();
+        const [english, spanish] = words[index];
+
+        await speakWord(english, 'en-US');
+        if (stopRequested || skipRequested || jumpToIndex) {
+          if (skipRequested) {
+            index = (index + 1) % words.length;
+            skipRequested = false;
+          }
+          if (jumpToIndex) {
+            jumpToIndex = false;
+          }
+          continue;
+        }
+
+        await speakWord(spanish, 'es-ES');
+        if (stopRequested || skipRequested || jumpToIndex) {
+          if (skipRequested) {
+            index = (index + 1) % words.length;
+            skipRequested = false;
+          }
+          if (jumpToIndex) {
+            jumpToIndex = false;
+          }
+          continue;
+        }
+
+        index = (index + 1) % words.length;
+        await waitWithPause(1000);
+      }
+
+      stopRequested = false;
+      pauseRequested = false;
+      skipRequested = false;
+      jumpToIndex = false;
+      started = false;
+      speechSynthesis.cancel();
+      display.textContent = "▶ Click to Start";
+      controls.style.display = "none";
+      pauseResumeBtn.textContent = "Pause";
+      Array.from(wordList.children).forEach(li => li.classList.remove('active'));
+    }
+
+    display.addEventListener('click', () => {
+      if (!started) {
+        started = true;
+        stopRequested = false;
+        skipRequested = false;
+        pauseRequested = false;
+        index = 0;
+        display.textContent = "Loading...";
+        controls.style.display = "flex";
+        pauseResumeBtn.textContent = "Pause";
+        setTimeout(() => {
+          playLoop();
+        }, 500);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      stopRequested = true;
+      speechSynthesis.cancel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (started) {
+        skipRequested = true;
+        speechSynthesis.cancel();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (started) {
+        skipRequested = true;
+        index = (index - 1 + words.length) % words.length;
+        speechSynthesis.cancel();
+      }
+    });
+
+    pauseResumeBtn.addEventListener('click', () => {
+      if (!started) return;
+      if (!pauseRequested) {
+        pauseRequested = true;
+        speechSynthesis.pause();
+        pauseResumeBtn.textContent = "Resume";
+      } else {
+        pauseRequested = false;
+        speechSynthesis.resume();
+        pauseResumeBtn.textContent = "Pause";
+      }
+    });
+  </script>
+</body>
+</html>

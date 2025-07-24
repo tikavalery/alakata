@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vocabulary</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="./vocabulary.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Word List</h2>
+    <ul id="wordList"></ul>
+  </div>
+
+  <div class="main">
+    <h1>Vocabulary</h1>
+    <div class="pagination">
+      <!-- A-Z Pagination -->
+      <a class="letter" href="./vocabulary.html">A</a>
+      <a class="letter" href="./vocabularyB.html">B</a>
+      <a class="letter" href="./vocabularyC.html">C</a>
+      <a class="letter" href="./vocabularyD.html">D</a>
+      <a class="letter" href="./vocabularyE.html">E</a>
+      <a class="letter" href="./vocabularyF.html">F</a>
+      <a class="letter" href="./vocabularyG.html">G</a>
+      <a class="letter" href="./vocabularyH.html">H</a>
+      <a class="letter" href="./vocabularyI.html">I</a>
+      <a class="letter" href="./vocabularyJ.html">J</a>
+      <a class="letter active" href="./vocabularyK.html">K</a>
+      <a class="letter" href="./vocabularyK.html">L</a>
+      <a class="letter" href="./vocabularyM.html">M</a>
+      <a class="letter" href="./vocabularyN.html">N</a>
+      <a class="letter" href="./vocabularyO.html">O</a>
+      <a class="letter" href="./vocabularyP.html">P</a>
+      <a class="letter" href="./vocabularyQ.html">Q</a>
+      <a class="letter" href="./vocabularyR.html">R</a>
+      <a class="letter" href="./vocabularyS.html">S</a>
+      <a class="letter" href="./vocabularyT.html">T</a>
+      <a class="letter" href="./vocabularyV.html">U</a>
+      <a class="letter" href="./vocabularyV.html">V</a>
+      <a class="letter" href="./vocabularyW.html">W</a>
+      <a class="letter" href="./vocabularyX.html">X</a>
+      <a class="letter" href="./vocabularyY.html">Y</a>
+      <a class="letter" href="./vocabularyZ.html">Z</a>
+    </div>
+
+    <div id="wordDisplay">▶ Click to Start</div>
+    <div class="instruction">Click the box to begin audio playback</div>
+    <div id="controls" style="display:none;">
+      <button id="prevBtn">Previous</button>
+      <button id="pauseResumeBtn">Pause</button>
+      <button id="stopBtn">Stop</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <script>
+
+//  word script Here  
+const words = [
+  ["key", "llave"],
+  ["kid", "niño"],
+  ["kind", "tipo"],
+  ["king", "rey"],
+  ["kitchen", "cocina"],
+  ["knee", "rodilla"],
+  ["knife", "cuchillo"],
+  ["knight", "caballero"],
+  ["knowledge", "conocimiento"],
+  ["to keep", "mantener"],
+  ["to kick", "patear"],
+  ["to kill", "matar"],
+  ["to kiss", "besar"],
+  ["to kneel", "arrodillarse"],
+  ["to knock", "golpear"],
+  ["to know", "saber"]
+];
+
+
+/////////////////
+    const display = document.getElementById('wordDisplay');
+    const controls = document.getElementById('controls');
+    const prevBtn = document.getElementById('prevBtn');
+    const pauseResumeBtn = document.getElementById('pauseResumeBtn');
+    const stopBtn = document.getElementById('stopBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const wordList = document.getElementById('wordList');
+
+    let index = 0;
+    let started = false;
+    let stopRequested = false;
+    let skipRequested = false;
+    let pauseRequested = false;
+    let jumpToIndex = false;
+
+    // Populate sidebar list
+    words.forEach(([en, es], i) => {
+      const li = document.createElement('li');
+      li.textContent = `${en} - ${es}`;
+      li.dataset.idx = i;
+      li.addEventListener('click', () => {
+        index = i;
+        if (started) {
+          jumpToIndex = true;
+          speechSynthesis.cancel();
+        } else {
+          updateDisplayAndHighlight();
+        }
+      });
+      wordList.appendChild(li);
+    });
+
+    function updateDisplayAndHighlight() {
+      const [en, es] = words[index];
+      display.textContent = `${en} - ${es}`;
+
+      Array.from(wordList.children).forEach(li => li.classList.remove('active'));
+      const activeLi = wordList.querySelector(`li[data-idx="${index}"]`);
+      if (activeLi) {
+        activeLi.classList.add('active');
+        activeLi.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    }
+
+    function speakWord(text, lang) {
+      return new Promise(resolve => {
+        if (stopRequested || skipRequested || jumpToIndex) {
+          resolve();
+          return;
+        }
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = lang;
+        utterance.onend = () => resolve();
+        utterance.onerror = () => resolve();
+        speechSynthesis.speak(utterance);
+      });
+    }
+
+    async function waitWithPause(ms) {
+      const interval = 100;
+      let waited = 0;
+      while (waited < ms) {
+        if (stopRequested || skipRequested || jumpToIndex) break;
+        if (!pauseRequested) {
+          waited += interval;
+        }
+        await new Promise(r => setTimeout(r, interval));
+      }
+    }
+
+    async function playLoop() {
+      while (!stopRequested) {
+        if (pauseRequested) {
+          await new Promise(r => setTimeout(r, 200));
+          continue;
+        }
+
+        updateDisplayAndHighlight();
+        const [english, spanish] = words[index];
+
+        await speakWord(english, 'en-US');
+        if (stopRequested || skipRequested || jumpToIndex) {
+          if (skipRequested) {
+            index = (index + 1) % words.length;
+            skipRequested = false;
+          }
+          if (jumpToIndex) {
+            jumpToIndex = false;
+          }
+          continue;
+        }
+
+        await speakWord(spanish, 'es-ES');
+        if (stopRequested || skipRequested || jumpToIndex) {
+          if (skipRequested) {
+            index = (index + 1) % words.length;
+            skipRequested = false;
+          }
+          if (jumpToIndex) {
+            jumpToIndex = false;
+          }
+          continue;
+        }
+
+        index = (index + 1) % words.length;
+        await waitWithPause(1000);
+      }
+
+      stopRequested = false;
+      pauseRequested = false;
+      skipRequested = false;
+      jumpToIndex = false;
+      started = false;
+      speechSynthesis.cancel();
+      display.textContent = "▶ Click to Start";
+      controls.style.display = "none";
+      pauseResumeBtn.textContent = "Pause";
+      Array.from(wordList.children).forEach(li => li.classList.remove('active'));
+    }
+
+    display.addEventListener('click', () => {
+      if (!started) {
+        started = true;
+        stopRequested = false;
+        skipRequested = false;
+        pauseRequested = false;
+        index = 0;
+        display.textContent = "Loading...";
+        controls.style.display = "flex";
+        pauseResumeBtn.textContent = "Pause";
+        setTimeout(() => {
+          playLoop();
+        }, 500);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      stopRequested = true;
+      speechSynthesis.cancel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (started) {
+        skipRequested = true;
+        speechSynthesis.cancel();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (started) {
+        skipRequested = true;
+        index = (index - 1 + words.length) % words.length;
+        speechSynthesis.cancel();
+      }
+    });
+
+    pauseResumeBtn.addEventListener('click', () => {
+      if (!started) return;
+      if (!pauseRequested) {
+        pauseRequested = true;
+        speechSynthesis.pause();
+        pauseResumeBtn.textContent = "Resume";
+      } else {
+        pauseRequested = false;
+        speechSynthesis.resume();
+        pauseResumeBtn.textContent = "Pause";
+      }
+    });
+  </script>
+</body>
+</html>
