@@ -264,7 +264,8 @@ switch (list) {
       const activeLi = wordList.querySelector(`li[data-idx="${index}"]`);
       if (activeLi) {
         activeLi.classList.add('active');
-        activeLi.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        activeLi.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
       }
     }
 
