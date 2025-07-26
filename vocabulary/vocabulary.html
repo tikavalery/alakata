@@ -13,10 +13,10 @@
  
 
 </style>
-
+<script src="./wordList.js"></script>
 </head>
 <body>
-  <div class="container">
+  <div class="container-main">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                           <div class="container-fluid">
                             <a class="navbar-brand" href="#">ALAKATA</a>
@@ -51,14 +51,18 @@
                           </div>
                 </nav>
     <!-- Sidebar Left -->
-                <aside class="sidebar">
-                  <!-- <h2>Word List</h2> -->
-                  <ul id="wordList" class="list-group sidebar"></ul>
-                </aside>
+             
                 
     <!-- Main Content -->
-                <main class="main">
-                                             <div id="controls" style="display:none;" class="controls">
+                <main class="main">  
+                  <div class="first-flex"> 
+                     <aside class="sidebar">
+                  <!-- <h2>Word List</h2> -->
+                   <ul id="wordList" class="list-group sidebar"></ul>
+                  </aside> 
+                </div>
+                  <div class="main-center">
+                    <div id="controls" style="display:none;" class="controls">
                             <button id="prevBtn">Previous</button>
                             <button id="pauseResumeBtn">Pause</button>
                             <button id="stopBtn">Stop</button>
@@ -66,48 +70,58 @@
                           </div> 
                           <div id="wordDisplay">▶ Play </div>
 
+
+                    
+
                            <div class="pagination">
-                            <a class="letter active" href="./vocabulary.html">A</a>
-                            <a class="letter" href="./vocabularyB.html">B</a>
-                            <a class="letter" href="./vocabularyC.html">C</a>
-                            <a class="letter" href="./vocabularyD.html">D</a>
-                            <a class="letter" href="./vocabularyE.html">E</a>
-                            <a class="letter" href="./vocabularyF.html">F</a>
-                            <a class="letter" href="./vocabularyG.html">G</a>
-                            <a class="letter" href="./vocabularyH.html">H</a>
-                            <a class="letter" href="./vocabularyI.html">I</a>
-                            <a class="letter" href="./vocabularyJ.html">J</a>
-                            <a class="letter" href="./vocabularyK.html">K</a>
-                            <a class="letter" href="./vocabularyK.html">L</a>
-                            <a class="letter" href="./vocabularyM.html">M</a>
-                            <a class="letter" href="./vocabularyN.html">N</a>
-                            <a class="letter" href="./vocabularyO.html">O</a>
-                            <a class="letter" href="./vocabularyP.html">P</a>
-                            <a class="letter" href="./vocabularyQ.html">Q</a>
-                            <a class="letter" href="./vocabularyR.html">R</a>
-                            <a class="letter" href="./vocabularyS.html">S</a>
-                            <a class="letter" href="./vocabularyT.html">T</a>
-                            <a class="letter" href="./vocabularyV.html">U</a>
-                            <a class="letter" href="./vocabularyV.html">V</a>
-                            <a class="letter" href="./vocabularyW.html">W</a>
-                            <a class="letter" href="./vocabularyX.html">X</a>
-                            <a class="letter" href="./vocabularyY.html">Y</a>
-                            <a class="letter" href="./vocabularyZ.html">Z</a>
+                                  <a class="letter active" href="?list=A">A</a>
+                                  <a class="letter" href="?list=B">B</a>
+                            <a class="letter" href="?list=C">C</a>
+                              <a class="letter" href="?list=D">D</a>
+                              <a class="letter" href="?list=E">E</a>
+                              <a class="letter" href="?list=F">F</a>
+                              <a class="letter" href="?list=G">G</a>
+                              <a class="letter" href="?list=H">H</a>
+                              <a class="letter" href="?list=I">I</a>
+                              <a class="letter" href="?list=J">J</a>
+                              <a class="letter" href="?list=K">K</a>
+                              <a class="letter" href="?list=L">L</a>
+                              <a class="letter" href="?list=M">M</a>
+                              <a class="letter" href="?list=N">N</a>
+                              <a class="letter" href="?list=O">O</a>
+                              <a class="letter" href="?list=P">P</a>
+                              <a class="letter" href="?list=Q">Q</a>
+                              <a class="letter" href="?list=R">R</a>
+                              <a class="letter" href="?list=S">S</a>
+                              <a class="letter" href="?list=T">T</a>
+                              <a class="letter" href="?list=U">U</a>
+                              <a class="letter" href="?list=V">V</a>
+                              <a class="letter" href="?list=W">W</a>
+                              <a class="letter" href="?list=X">X</a>
+                              <a class="letter" href="?list=Y">Y</a>
+                              <a class="letter" href="?list=Z">Z</a>
+
                           </div> 
+                  </div>
+                  <!-- <div class="first-flex"> -->
+                           <!-- Sidebar Right -->
+                          <!-- <aside class="sidebar">
+                              <h2> Downloads </h2>
+                                <p>
+                                Download PDF of A Vocabulary
+                                <span><a href="./vocabularycart/vocabularyCartA.html">here</a></span>
+                              </p>
+                              <p>
+                                Download Fill in the blank exercises
+                                <span><a href="./vocabularycart/vocabularyCartA.html">here</a></span>
+                              </p> 
+                            </aside> 
+                  </div> -->
+               
+                            
                         </main>
 
-    <!-- Sidebar Right -->
-    <aside class="sidebar">
-      <h2> Downloads </h2>
-         <p>
-        Download PDF of A Vocabulary
-        <span><a href="./vocabularycart/vocabularyCartA.html">here</a></span>
-      </p>
-      <p>
-        Download Fill in the blank exercises
-        <span><a href="./vocabularycart/vocabularyCartA.html">here</a></span>
-      </p> 
-    </aside>
+
   </div>
 
 
@@ -116,420 +130,98 @@
 
 
   <script>
-const words = [
-  ["able", "capaz"],
-  ["agent", "agente"],
-  ["agree", "estar de acuerdo"],
-  ["agreement", "acuerdo"],
-  ["ahead", "adelante"],
-  ["air", "aire"],
-  ["airport", "aeropuerto"],
-  ["all", "todo"],
-  ["almost", "casi"],
-  ["alone", "solo"],
-  ["along", "a lo largo de"],
-  ["already", "ya"],
-  ["also", "también"],
-  ["although", "aunque"],
-  ["always", "siempre"],
-  ["amazing", "asombroso"],
-  ["among", "entre"],
-  ["amount", "cantidad"],
-  ["analysis", "análisis"],
-  ["animal", "animal"],
-  ["English", "Spanish"],
-  ["answer", "respuesta"],
-  ["any", "cualquier"],
-  ["anyone", "cualquiera"],
-  ["anything", "cualquier cosa"],
-  ["apply", "aplicar"],
-  ["area", "área"],
-  ["argue", "discutir"],
-  ["argument", "argumento"],
-  ["arise", "surgir"],
-  ["arm", "brazo"],
-  ["army", "ejército"],
-  ["around", "alrededor"],
-  ["arrange", "organizar"],
-  ["art", "arte"],
-  ["article", "artículo"],
-  ["artist", "artista"],
-  ["as", "como"],
-  ["ask", "preguntar"],
-  ["asleep", "dormido"],
-  ["aspect", "aspecto"],
-  ["assess", "evaluar"],
-  ["assignment", "tarea"],
-  ["assist", "asistir"],
-  ["assume", "asumir"],
-  ["athlete", "atleta"],
-  ["attach", "adjuntar"],
-  ["attempt", "intento"],
-  ["attention", "atención"],
-  ["attorney", "abogado"],
-  ["attract", "atraer"],
-  ["audience", "audiencia"],
-  ["author", "autor"],
-  ["authority", "autoridad"],
-  ["auto", "auto"],
-  ["available", "disponible"],
-  ["average", "promedio"],
-  ["avoid", "evitar"],
-  ["award", "premio"],
-  ["aware", "consciente"],
-  ["away", "lejos"],
-  ["ability", "habilidad"],
-  ["absent", "ausente"],
-  ["absolutely", "absolutamente"],
-  ["absorb", "absorber"],
-  ["abstract", "abstracto"],
-  ["abundance", "abundancia"],
-  ["abuse", "abuso"],
-  ["academic", "académico"],
-  ["accept", "aceptar"],
-  ["access", "acceso"],
-  ["accident", "accidente"],
-  ["accompany", "acompañar"],
-  ["accomplish", "lograr"],
-  ["according", "según"],
-  ["account", "cuenta"],
-  ["accumulate", "acumular"],
-  ["accurate", "preciso"],
-  ["accuse", "acusar"],
-  ["achieve", "lograr"],
-  ["acknowledge", "reconocer"],
-  ["acquire", "adquirir"],
-  ["act", "actuar"],
-  ["activate", "activar"],
-  ["actual", "actual"],
-  ["adapt", "adaptar"],
-  ["add", "añadir"],
-  ["addition", "adición"],
-  ["address", "dirección"],
-  ["adjust", "ajustar"],
-  ["administer", "administrar"],
-  ["admire", "admirar"],
-  ["adopt", "adoptar"],
-  ["adult", "adulto"],
-  ["advance", "avanzar"],
-  ["advantage", "ventaja"],
-  ["adventure", "aventura"],
-  ["advertise", "anunciar"],
-  ["advice", "consejo"],
-  ["advise", "aconsejar"],
-  ["advocate", "defensor"],
-  ["affect", "afectar"],
-  ["affection", "afecto"],
-  ["afford", "permitir"],
-  ["afraid", "asustado"],
-  ["agency", "agencia"],
-  ["agree", "acordar"],
-  ["agriculture", "agricultura"],
-  ["aid", "ayuda"],
-  ["aim", "objetivo"],
-  ["alarm", "alarma"],
-  ["album", "álbum"],
-  ["alert", "alerta"],
-  ["alive", "vivo"],
-  ["allow", "permitir"],
-  ["alter", "alterar"],
-  ["alternative", "alternativa"],
-  ["amaze", "asombrar"],
-  ["amuse", "divertir"],
-  ["analyze", "analizar"],
-  ["ancient", "antiguo"],
-  ["anger", "ira"],
-  ["angle", "ángulo"],
-  ["announce", "anunciar"],
-  ["annual", "anual"],
-  ["anticipate", "anticipar"],
-  ["anxiety", "ansiedad"],
-  ["apart", "aparte"],
-  ["apologize", "disculparse"],
-  ["appeal", "apelación"],
-  ["appoint", "nombrar"],
-  ["appreciate", "apreciar"],
-  ["approach", "acercarse"],
-  ["appropriate", "apropiado"],
-  ["approve", "aprobar"],
-  ["arrive", "llegar"],
-  ["assign", "asignar"],
-  ["associate", "asociar"],
-  ["assure", "asegurar"],
-  ["atmosphere", "atmósfera"],
-  ["attend", "asistir"],
-  ["attitude", "actitud"],
-  ["automatic", "automático"],
-  ["awesome", "impresionante"],
-  ["axis", "eje"],
-  ["abbreviation", "abreviatura"],
-  ["abnormal", "anormal"],
-  ["aboard", "a bordo"],
-  ["absurd", "absurdo"],
-  ["accent", "acento"],
-  ["acceptance", "aceptación"],
-  ["accessible", "accesible"],
-  ["accidental", "accidental"],
-  ["accord", "acuerdo"],
-  ["accuracy", "exactitud"],
-  ["actual", "real"],
-  ["additional", "adicional"],
-  ["addict", "adicto"],
-  ["admirable", "admirable"],
-  ["admission", "admisión"],
-  ["admit", "admitir"],
-  ["aesthetic", "estético"],
-  ["affectation", "afectación"],
-  ["affiliation", "afiliación"],
-  ["affirm", "afirmar"],
-  ["agenda", "agenda"],
-  ["aggregate", "agregado"],
-  ["aggressive", "agresivo"],
-  ["airlift", "transporte aéreo"],
-  ["aisle", "pasillo"],
-  ["alias", "alias"],
-  ["alien", "extraterrestre"],
-  ["align", "alinear"],
-  ["allocate", "asignar"],
-  ["altitude", "altitud"],
-  ["altogether", "en conjunto"],
-  ["amplify", "amplificar"],
-  ["analyst", "analista"],
-  ["ancestor", "ancestro"],
-  ["animate", "animar"],
-  ["app", "aplicación"],
-  ["appendix", "apéndice"],
-  ["application", "solicitud"],
-  ["approach", "acercar"],
-  ["approximate", "aproximado"],
-  ["architect", "arquitecto"],
-  ["archive", "archivo"],
-  ["arithmetic", "aritmética"],
-  ["arrangement", "disposición"],
-  ["arrest", "arrestar"],
-  ["artificial", "artificial"],
-  ["ascend", "ascender"],
-  ["assert", "afirmar"],
-  ["assumption", "suposición"],
-  ["astonish", "asombrar"],
-  ["attack", "ataque"],
-  ["auction", "subasta"],
-  ["arouse", "despertar"],
-  ["articulate", "articular"],
-  ["abandon", "abandonar"],
-  ["abbreviate", "abreviar"],
-  ["abject", "abyecto"],
-  ["abolish", "abolir"],
-  ["about-face", "vuelta atrás"],
-  ["absolute", "absoluto"],
-  ["absolve", "absolver"],
-  ["absorbent", "absorbente"],
-  ["abstain", "abstenerse"],
-  ["absurdity", "absurdo"],
-  ["accelerate", "acelerar"],
-  ["acceptable", "aceptable"],
-  ["accessibly", "accesiblemente"],
-  ["accomplice", "cómplice"],
-  ["accumulative", "acumulativo"],
-  ["accustomed", "acostumbrado"],
-  ["active", "activo"],
-  ["actuality", "realidad"],
-  ["actualize", "actualizar"],
-  ["adaptative", "adaptativo"],
-  ["addictive", "adictivo"],
-  ["addition", "suma"],
-  ["adjuster", "ajustador"],
-  ["admiration", "admiración"],
-  ["adulting", "adultez"],
-  ["advance", "avance"],
-  ["advantageous", "ventajoso"],
-  ["adversarial", "adversarial"],
-  ["advertisement", "publicidad"],
-  ["advisement", "asesoramiento"],
-  ["aerial", "aéreo"],
-  ["aerodynamics", "aerodinámica"],
-  ["affective", "afectivo"],
-  ["affirmation", "afirmación"],
-  ["affliction", "aflicción"],
-  ["affluent", "afluente"],
-  ["affordably", "asequible"],
-  ["afterthought", "reflexión posterior"],
-  ["agglomerate", "aglomerar"],
-  ["agitate", "agitar"],
-  ["agnostic", "agnóstico"],
-  ["agonize", "agonizar"],
-  ["agreeably", "amigablemente"],
-  ["agreeable", "aceptable"],
-  ["alibi", "coartada"],
-  ["alienate", "alienar"],
-  ["allegiance", "lealtad"],
-  ["alleviate", "aliviar"],
-  ["amalgamate", "amalgamar"],
-  ["amiable", "amigable"],
-  ["ample", "amplio"],
-  ["amputate", "amputar"],
-  ["amusing", "divertido"],
-  ["ancestry", "ascendencia"],
-  ["animalistic", "animalista"],
-  ["anonymous", "anónimo"],
-  ["antagonistic", "antagónico"],
-  ["abduction", "secuestro"],
-  ["abominable", "abominable"],
-  ["about-turn", "vuelta atrás"],
-  ["abusive", "abusivo"],
-  ["acclamation", "aclamación"],
-  ["accolade", "reconocimiento"],
-  ["accommodate", "acomodar"],
-  ["accorded", "acordado"],
-  ["accredit", "acreditar"],
-  ["accuracy", "precisión"],
-  ["achievability", "alcanzabilidad"],
-  ["acid", "ácido"],
-  ["acoustic", "acústico"],
-  ["acquit", "absolver"],
-  ["acrobatics", "acrobacias"],
-  ["actionably", "en acción"],
-  ["activism", "activismo"],
-  ["actuate", "activar"],
-  ["adaptively", "adaptativamente"],
-  ["additive", "aditivo"],
-  ["adieu", "adiós"],
-  ["adjacently", "adyacente"],
-  ["adulthood", "adultez"],
-  ["advanceable", "avanzable"],
-  ["advantageously", "ventajosamente"],
-  ["adventurous", "aventurero"],
-  ["adverse", "adverso"],
-  ["advocacy", "defensa"],
-  ["affected", "afectado"],
-  ["aggravate", "agravar"],
-  ["aggregate", "agregar"],
-  ["agonizing", "agonizante"],
-  ["alertness", "alerta"],
-  ["alignment", "alineación"],
-  ["alike", "parecido"],
-  ["amass", "acumular"],
-  ["amateur", "aficionado"],
-  ["amazing", "increíble"],
-  ["ambassador", "embajador"],
-  ["ambition", "ambición"],
-  ["ambiguous", "ambiguo"],
-  ["amounting", "que asciende"],
-  ["amplification", "amplificación"],
-  ["amputee", "amputado"],
-  ["anecdotal", "anecdótico"],
-  ["angelic", "angelical"],
-  ["animated", "animado"],
-  ["anomaly", "anomalía"],
-  ["answerable", "responsable"],
-  ["apostle", "apóstol"],
-  ["applicable", "aplicable"],
-  ["appointed", "nombrado"],
-  ["apportion", "repartir"],
-  ["appreciable", "apreciable"],
-  ["approach", "acercamiento"],
-  ["approval", "aprobación"],
-  ["architecture", "arquitectura"],
-  ["argue", "argumentar"],
-  ["argumentation", "argumentación"],
-  ["armchair", "sillón"],
-  ["armed", "armado"],
-  ["aroma", "aroma"],
-  ["ashamed", "avergonzado"],
-  ["assertion", "afirmación"],
-  ["assessable", "evaluable"],
-  ["assessment", "evaluación"],
-  ["asset", "activo"],
-  ["astounding", "asombroso"],
-  ["astute", "astuto"],
-  ["atmospheric", "atmosférico"],
-  ["attach", "unir"],
-  ["attestation", "atestación"],
-  ["attraction", "atracción"],
-  ["automate", "automatizar"],
-  ["autonomously", "autónomamente"],
-  ["availability", "disponibilidad"],
-  ["ablaze", "en llamas"],
-  ["aboriginal", "aborigen"],
-  ["abortive", "abortivo"],
-  ["abroad", "en el extranjero"],
-  ["abrupt", "abrupto"],
-  ["absence", "ausencia"],
-  ["absorbed", "absorbido"],
-  ["accessory", "accesorio"],
-  ["acclaim", "aclamar"],
-  ["ace", "as"],
-  ["ache", "dolor"],
-  ["acknowledgment", "reconocimiento"],
-  ["addiction", "adicción"],
-  ["adequate", "adecuado"],
-  ["adjacent", "adyacente"],
-  ["adjustment", "ajuste"],
-  ["admittedly", "a decir verdad"],
-  ["advent", "llegada"],
-  ["adviser", "asesor"],
-  ["affectionate", "afectuoso"],
-  ["afflict", "afligir"],
-  ["affront", "agravio"],
-  ["against", "contra"],
-  ["age", "edad"],
-  ["aggression", "agresión"],
-  ["agony", "agonía"],
-  ["allot", "repartir"],
-  ["allude", "aludir"],
-  ["ally", "aliado"],
-  ["amazing", "impresionante"],
-  ["ambiguity", "ambigüedad"],
-  ["ambitious", "ambicioso"],
-  ["angel", "ángel"],
-  ["anguish", "angustia"],
-  ["annals", "anales"],
-  ["anticipation", "anticipación"],
-  ["appointment", "cita"],
-  ["aptitude", "aptitud"],
-  ["arrangement", "arreglo"],
-  ["astonishing", "asombroso"],
-  ["attest", "atestiguar"],
-  ["accountability", "responsabilidad"],
-  ["accumulator", "acumulador"],
-  ["achievability", "realizabilidad"],
-  ["acquiescence", "acquiescencia"],
-  ["acquitted", "absuelto"],
-  ["actuate", "accionar"],
-  ["adaptable", "adaptable"],
-  ["adaptive", "adaptativo"],
-  ["adjudicate", "adjudicar"],
-  ["adoration", "adoración"],
-  ["adventitious", "adventicio"],
-  ["advertise", "publicitar"],
-  ["advertisement", "anuncio"],
-  ["advisable", "aconsejable"],
-  ["advisor", "consejero"],
-  ["affinity", "afinidad"],
-  ["aggregate", "totalizar"],
-  ["aggression", "agresividad"],
-  ["agreeable", "agradable"],
-  ["agricultural", "agrícola"],
-  ["alarmingly", "alarmantemente"],
-  ["alertness", "vigilancia"],
-  ["alias", "seudónimo"],
-  ["alongside", "al lado"],
-  ["altercation", "altercado"],
-  ["alternate", "alternar"],
-  ["amazement", "asombro"],
-  ["amusing", "entretenido"],
-  ["ancestor", "antepasado"],
-  ["annuity", "anualidad"],
-  ["antique", "antigüedad"],
-  ["anybody", "cualquiera"],
-  ["anyway", "de todos modos"],
-  ["apathetic", "apático"],
-  ["append", "añadir"],
-  ["application", "aplicación"],
-  ["approximate", "aproximar"],
-  ["astounding", "sorprendente"],
-  ["autonomy", "autonomía"]
-];
+
+    
+console.log(listA)
+console.log(listB)
+
+
+    const params = new URLSearchParams(window.location.search);
+    const list = params.get("list")?.toUpperCase();
+    let words = [];
+switch (list) {
+  case "A":
+    words = listA;
+    break;
+  case "B":
+    words = listB;
+    break;
+  case "C":
+    words = listC;
+    break;
+  case "D":
+    words = listD;
+    break;
+  case "E":
+    words = listE;
+    break;
+  case "F":
+    words = listF;
+    break;
+  case "G":
+    words = listG;
+    break;
+  case "H":
+    words = listH;
+    break;
+  case "I":
+    words = listI;
+    break;
+  case "J":
+    words = listJ;
+    break;
+  case "K":
+    words = listK;
+    break;
+  case "L":
+    words = listL;
+    break;
+  case "M":
+    words = listM;
+    break;
+  case "N":
+    words = listN;
+    break;
+  case "O":
+    words = listO;
+    break;
+  case "P":
+    words = listP;
+    break;
+  case "Q":
+    words = listQ;
+    break;
+  case "R":
+    words = listR;
+    break;
+  case "S":
+    words = listS;
+    break;
+  case "T":
+    words = listT;
+    break;
+  case "U":
+    words = listU;
+    break;
+  case "V":
+    words = listV;
+    break;
+  case "W":
+    words = listW;
+    break;
+  case "X":
+    words = listX;
+    break;
+  case "Y":
+    words = listY;
+    break;
+  case "Z":
+    words = listZ;
+    break;
+  default:
+    words = [];
+    document.getElementById("wordDisplay").textContent = "Please select a list from above.";
+}
 
     const display = document.getElementById('wordDisplay');
     const controls = document.getElementById('controls');
@@ -702,6 +394,42 @@ const words = [
         pauseResumeBtn.textContent = "Pause";
       }
     });
+
+    // Create the element
+const floatingText = document.createElement('div');
+floatingText.textContent = 'alakata.com';
+floatingText.style.position = 'fixed';
+floatingText.style.fontWeight = 'bold';
+floatingText.style.fontSize = '24px';
+floatingText.style.color = '#4b545d';
+floatingText.style.zIndex = '9999';
+floatingText.style.transition = 'opacity 1.5s ease';
+floatingText.style.opacity = '0'; // initially hidden
+document.body.appendChild(floatingText);
+
+// Function to randomly position and toggle visibility
+function showAlakataRandomly() {
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  const randomX = Math.floor(Math.random() * (screenWidth - 100));
+  const randomY = Math.floor(Math.random() * (screenHeight - 30));
+
+  floatingText.style.left = `${randomX}px`;
+  floatingText.style.top = `${randomY}px`;
+
+  // Show the text
+  floatingText.style.opacity = '1';
+
+  // Hide it after 2 seconds
+  setTimeout(() => {
+    floatingText.style.opacity = '0';
+  }, 2000);
+}
+
+// Show every 5 seconds
+setInterval(showAlakataRandomly, 20000);
+
   </script>
   <!-- Bootstrap 5 JS + Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
