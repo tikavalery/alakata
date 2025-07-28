@@ -19,7 +19,6 @@ const listA = [
   ["amount", "cantidad"],
   ["analysis", "análisis"],
   ["animal", "animal"],
-  ["English", "Spanish"],
   ["answer", "respuesta"],
   ["any", "cualquier"],
   ["anyone", "cualquiera"],
