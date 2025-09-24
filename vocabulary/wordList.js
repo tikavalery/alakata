@@ -2797,7 +2797,6 @@ const listG = [
   ["gadget", "dispositivo"],
   ["gash", "corte"],
   ["gear", "equipo"],
-  ["giddy", "aturdido"],
   ["gloom", "tristeza"],
   ["gossip", "chisme"],
   ["golden", "dorado"],
