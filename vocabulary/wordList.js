@@ -4586,7 +4586,7 @@ const listJ = [
   ["jovial", "jovial"],
   ["junkyard", "cementerio de chatarra"],
   ["jumpstart", "arranque en frío"],
-  ["jester", "bufón"],,
+  ["jester", "bufón"],
   ["joint", "articulación"],
   ["jog", "trotar"],
   ["judge", "juzgar"],
