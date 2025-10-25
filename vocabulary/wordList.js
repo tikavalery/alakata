@@ -6308,7 +6308,6 @@ const listO = [
   ["outpouring", "torrente"],
   ["operating", "operativo"],
   ["outsmart", "sobrepasar"],
-  ["oblong", "oblongado"]
 ];
 
 const listP = [
