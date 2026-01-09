@@ -1490,7 +1490,6 @@ const listE = [
   ["Ease", "Facilitar"],
   ["East", "Este"],
   ["Eat", "Comer"],
-  ["Ebb", "Retumbar"],
   ["Echo", "Eco"],
   ["Edge", "Borde"],
   ["Edit", "Editar"],
