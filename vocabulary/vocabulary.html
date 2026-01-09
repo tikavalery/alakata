@@ -402,14 +402,16 @@ switch (list) {
 
     // Create the element
 const floatingText = document.createElement('div');
-floatingText.textContent = 'Please DOWNLOAD list from website below';
+floatingText.textContent = 'Please DOWNLOAD list, SUBSCRIBE and LIKE from below';
 floatingText.style.position = 'fixed';
 floatingText.style.fontWeight = 'bold';
-floatingText.style.fontSize = '24px';
-floatingText.style.color = '#4b545d';
+floatingText.style.fontSize = '26px';
+floatingText.style.color = '#0066cc';
+floatingText.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 102, 204, 0.3)';
 floatingText.style.zIndex = '9999';
-floatingText.style.transition = 'opacity 2.0s ease';
+floatingText.style.transition = 'opacity 3.0s ease';
 floatingText.style.opacity = '0'; // initially hidden
+floatingText.style.pointerEvents = 'none'; // Don't interfere with clicks
 document.body.appendChild(floatingText);
 
 // Function to randomly position and toggle visibility
@@ -429,7 +431,7 @@ function showAlakataRandomly() {
   // Hide it after 2 seconds
   setTimeout(() => {
     floatingText.style.opacity = '0';
-  }, 2000);
+  }, 5000);
 }
 
 // Show every 5 seconds
