@@ -392,17 +392,31 @@
     right: 0;
     width: 100%;
     z-index: 999;
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #333;
     padding: 12px;
     border-radius: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   #controls button {
-    /* flex: 1 1 auto; */
-    padding: 2px;
-    font-size: 0.7rem;
+    padding: 8px 16px;
+    font-size: 0.75rem;
+    background-color: #1e2a38;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  #controls button:hover {
+    background-color: #2c3e50;
+  }
+
+  #controls button:active {
+    background-color: #34495e;
   }
 
   .pagination {
