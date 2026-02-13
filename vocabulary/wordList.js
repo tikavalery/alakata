@@ -7087,7 +7087,6 @@ const listS = [
   ["Slap", "Bofetada"],
   ["Squirrel", "Ardilla"],
   ["Swell", "Hinchar"],
-  ["Scoff", "Burlarse"],
   ["Shadow", "Sombra"],
   ["Study", "Estudio"],
   ["String", "Hilo"],
