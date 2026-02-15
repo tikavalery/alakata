@@ -4498,7 +4498,7 @@ const listL = [
   ["linguist", "lingüista"],
   ["loud", "ruidoso"],
   ["lend", "prestar"],
-  ["locality", "localidad"],,
+  ["locality", "localidad"],
   ["limelight", "luz de la fama"],
   ["lifeboat", "bote salvavidas"],
   ["laxative", "laxante"],
