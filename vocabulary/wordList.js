@@ -3100,7 +3100,7 @@ const listH = [
   ["Helpful", "Útil"],
   ["Honking", "Claxon"],
   ["Humanly", "Humanamente"],
-0  ["Hilarious", "Hilarante"],
+ ["Hilarious", "Hilarante"],
   ["Hike", "Senderismo"],
   ["Hunk", "Atractivo"],
   ["Healing", "Sanación"],
