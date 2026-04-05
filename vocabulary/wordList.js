@@ -1167,7 +1167,7 @@ const listC = [
 
 
 const listD = [
-["Dabble", "Jugar"],
+   ["Dabble", "Jugar"],
   ["Daring", "Atrevido"],
   ["Dark", "Oscuro"],
   ["Day", "Día"],
@@ -1275,7 +1275,6 @@ const listD = [
   ["Dilemma", "Dilema"],
   ["Disperse", "Dispersar"],
   ["Diversify", "Diversificar"],
-  ["Duct", "Conducto"],
   ["Decor", "Decorar"],
   ["Detour", "Desvío"],
   ["Dialect", "Dialecto"],
@@ -1421,7 +1420,6 @@ const listD = [
   ["Deferential", "Deferente"],
   ["Distort", "Distorsionar"],
   ["Deferentiality", "Deferencialidad"],
-  ["Derelict", "Abandonado"],
   ["Deferent", "Deferente"],
   ["Depressed", "Deprimido"],
   ["Disapproving", "Desaprobador"],
@@ -1505,7 +1503,6 @@ const listD = [
   ["Display", "Exhibir"],
   ["Dismay", "Desaliento"],
   ["Detriment", "Detrimento"],
-  ["Divergence", "Divergencia"],
   ["Doubtful", "Dudoso"],
   ["Decorator", "Decorador"],
   ["Deform", "Deformar"],
@@ -1523,7 +1520,6 @@ const listD = [
   ["Displace", "Desplazar"],
   ["Dip", "Sumergir"],
   ["Dismissive", "Despectivo"],
-  ["Discretion", "Discreción"],
   ["Distrustful", "Desconfiado"],
   ["Decimate", "Diezmado"],
   ["Deferentially", "Deferencialmente"],
@@ -1580,7 +1576,6 @@ const listD = [
   ["Dispossess", "Desposeer"],
   ["Dissuade", "Disuadir"],
   ["Despise", "Despreciar"],
-  ["Deviance", "Desviación"],
   ["Drowsy", "Somnoliento"],
   ["Diffuse", "Difundir"],
   ["Disparate", "Dispar"],
