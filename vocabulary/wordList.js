@@ -2986,7 +2986,6 @@ const listH = [
   ["High-powered", "Alta potencia"],
   ["Heal", "Curar"],
   ["Handcuff", "Esposar"],
-  ["Hotheaded", "Caliente"],
   ["Hospitalized", "Hospitalizado"],
   ["Hands-on", "Práctico"],
   ["Honest", "Honesto"],
