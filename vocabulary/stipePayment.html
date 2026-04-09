@@ -10,7 +10,7 @@
     document.getElementById('paymentForm').addEventListener('submit', async function (e) {
       e.preventDefault();
       const email = document.getElementById('email').value;
-
+     
       // Save email on your server before redirecting to Stripe
       await fetch('/create-session', {
         method: 'POST',
