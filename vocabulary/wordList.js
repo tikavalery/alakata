@@ -3196,7 +3196,7 @@ const listI = [
   ["Imprison", "Encarcelar"],
   ["Immoral", "Inmoral"],
   ["Immobility", "Inmovilidad"],
-  ["Innovate", "Innovar"],,
+  ["Innovate", "Innovar"],
   ["Incident", "Incidente"],
   ["Ignorance", "Ignorancia"],
   ["Inflexible", "Inflexible"],
