@@ -6431,7 +6431,6 @@ const listW = [
   ["wail", "lamentar"],
   ["wicket", "portillo"],
   ["weave", "tejer"],
-  ["windmill", "molino de viento"],
   ["world-class", "de clase mundial"],
   ["wakeful", "insomne"],
   ["wax", "cera"],
@@ -6445,7 +6444,6 @@ const listW = [
   ["winner", "ganador"],
   ["wanderer", "vagabundo"],
   ["wire", "alambre"],
-  ["workhorse", "caballo de trabajo"],
   ["witness", "testigo"],
   ["worthwhile", "valioso"],
   ["wizard", "mago"],
@@ -6464,11 +6462,9 @@ const listW = [
   ["workout", "ejercicio"],
   ["whale", "ballena"],
   ["worm", "gusano"],
-  ["windstorm", "tormenta de viento"],
   ["warden", "custodio"],
   ["woodwork", "trabajo en madera"],
   ["worshiper", "adorador"],
-  ["wanderlust", "deseo de viajar"],
   ["watchtower", "torre de vigilancia"],
   ["walkout", "huelga"],
   ["womanly", "femenino"],
@@ -6477,10 +6473,7 @@ const listW = [
   ["well-being", "bienestar"],
   ["wishful", "deseoso"],
   ["weaponry", "armamento"],
-  ["woodpile", "montón de leña"],
   ["wilderness", "desierto"],
-  ["workmanlike", "profesional"],
-  ["wolfish", "lobuno"],
   ["wooden", "de madera"],
   ["wishful thinking", "ilusiones"],
   ["workday", "día de trabajo"],
@@ -6522,9 +6515,7 @@ const listY = [
   ["yeast", "levadura"],
   ["youngster", "joven"],
   ["year-round", "todo el año"],
-  ["yam", "ñame"],
-  ["yerk", "golpear"],
-  ["yielding", "que cede"]
+  ["yam", "ñame"]
 ];
 
 const listZ = [
@@ -6535,11 +6526,9 @@ const listZ = [
   ["zigzag", "zigzag"],
   ["zookeeper", "cuidador de zoológico"],
   ["zombie", "zombi"],
-  ["zip", "cremallera"],
   ["zigzagging", "en zigzag"],
   ["zinc", "zinc"],
   ["zoologist", "zoólogo"],
-  ["zap", "golpear"],
   ["zoology", "zoología"],
   ["zoomed in", "acercado"]
 ];
